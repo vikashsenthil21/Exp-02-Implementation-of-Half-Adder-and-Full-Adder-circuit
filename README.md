@@ -1,4 +1,4 @@
-# Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
+# Exp-03-Implementation-of-Half-Adder-and-Full-Adder-circuit
 
 # Implementation-of-Half-Adder-and-Full-Adder-circuit
 ### AIM:
@@ -34,21 +34,56 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
-### 
-Program:
-/*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+### Program:
+```
+Developed by: VIKASH S
+RegisterNumber: 212222240115
+```
+HALF ADDER
+```
+module exp3(A,B,C,S);
+input A,B;
+output S,C;
+assign S=A^B;
+assign C=A&B;
+endmodule
+```
+FULL ADDER
+ ```
+module exp3_2(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum=a^b^c;
+assign carry=((a&b)|(b&c)|(c&a));
+endmodule
+```
+### TRUTH TABLE:
+
+HALF ADDER
+![Screenshot 2023-09-01 092526](https://github.com/vikashsenthil21/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119433834/bf1dd111-4d1d-4e29-84c8-d44804301ad6)
+FULL ADDER
+
+![Screenshot 2023-09-01 092658](https://github.com/vikashsenthil21/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119433834/9f614dd9-ca40-4d03-b340-5dc9959450da)
+### RTL:
+HALF ADDER
+![rtl 3](https://github.com/vikashsenthil21/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119433834/d1222031-0344-4448-adbf-e2f3dbcec0ab)
+
+FULL ADDER
+
+![rtl 2](https://github.com/vikashsenthil21/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119433834/9feb1267-36c1-4a9c-9fc8-eeaac21c47fb)
+
+
 
 ### Output:
-### RTL
-### TIMING DIAGRAM
+HALF ADDER
 
 
-### TRUTH TABLE 
+![Screenshot 2023-09-01 093210](https://github.com/vikashsenthil21/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119433834/20415589-5c70-4769-b664-3b774cb249a0)
+
+FULL ADDER
+![exp3_2](https://github.com/vikashsenthil21/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/119433834/ac1bf998-e34c-461a-be2c-fb73f7549e1e)
+
+
 
 ### Result:
+Thus the half adder and full adder circuits are designed and the truth tables is verified using quartus software.
